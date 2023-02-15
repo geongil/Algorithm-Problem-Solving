@@ -1,16 +1,9 @@
-A, B = [], []
-
 N, M = map(int, input().split())
+arr_A = [list(map(int, input().split())) for _ in range(N)]
+arr_B = [list(map(int, input().split())) for _ in range(N)]
 
-for row in range(N):
-    row = list(map(int, input().split()))
-    A.append(row)
-
-for row in range(N):
-    row = list(map(int, input().split()))
-    B.append(row)
-    
-for row in range(N):
-    for col in range(M):
-        print(A[row][col] + B[row][col], end=' ')
+for i in range(N):
+    for j in range(M):
+        print(arr_A[i][j] + arr_B[i][j], end=" ")
     print()
+
